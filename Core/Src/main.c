@@ -24,7 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "lcd.h"
-#include "lcd_config.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,11 +89,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  lcd16x2_init_4bits(RS_GPIO_Port, RS_Pin, E_Pin,
-		  D4_GPIO_Port, D4_Pin, D5_Pin, D6_Pin, D7_Pin);
-
-   lcd16x2_printf("Hello World");
-   HAL_Delay(1000);
+  lcd_init();
+  float cap;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,14 +101,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	lcd16x2_1stLine();
-	lcd16x2_printf("Temperature 4bits");
-	HAL_Delay(1000);
-	lcd16x2_2ndLine();
-	lcd16x2_printf("%.2f C", 25.7824);
-	HAL_Delay(1000);
-	lcd16x2_clear();
-	HAL_Delay(500);
+	  lcd_line1();                         // navigate to line 1
+	  cap = 2.365f;
+	  lcd_printf("Condensator size");      // print command
+	  lcd_line2();                         // navigate to line 2
+	  lcd_printf("Capacity %.2f nf", cap);
   }
   /* USER CODE END 3 */
 }

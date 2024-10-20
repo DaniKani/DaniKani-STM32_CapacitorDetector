@@ -1,0 +1,3 @@
+[submodule "Core/Src/lcd16x2_stm32"]
+	path = Core/Src/lcd16x2_stm32
+	url = https://github.com/DaniKani/lcd16x2_stm32.git
