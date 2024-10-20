@@ -1,42 +1,31 @@
-# Ignore build output directories
-Debug/
-Release/
+# Ignore build directories
+/Debug/
+/Release/
 
-# Ignore object files, compiled outputs, and dependency files
+# Ignore build files
 *.o
 *.d
-*.su
 *.elf
-*.hex
 *.bin
+*.hex
 *.map
 *.list
+*.srec
 
-# Ignore IDE specific files that can be regenerated
-.cproject
-.project
-.settings/
-
-# Ignore STM32CubeMX generated files that can be regenerated from the .ioc file
-*.ioc
-
-# Ignore auto-generated files from STM32CubeMX or STM32CubeIDE
-MX_*.c
-MX_*.h
-
-# Ignore makefiles if they are auto-generated
-makefile
-Makefile
-*.mk
-
-# Ignore user-specific files (e.g., debug configurations)
-*.launch
+# Ignore STM32CubeMX generated files (optional)
+/MX_*.c
+/MX_*.h
+*.ioc  # (include it if you want to share the CubeMX config)
+/.system_stm32f4xx.c
 
 # Ignore backup and temporary files
 *.bak
 *.tmp
 *.log
 
-# Ignore operating system specific files
+# Ignore system-specific files
 .DS_Store
 Thumbs.db
+
+# Ignore editor-specific files
+*.swp
