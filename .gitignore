@@ -1,0 +1,42 @@
+# Ignore build output directories
+Debug/
+Release/
+
+# Ignore object files, compiled outputs, and dependency files
+*.o
+*.d
+*.su
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+
+# Ignore IDE specific files that can be regenerated
+.cproject
+.project
+.settings/
+
+# Ignore STM32CubeMX generated files that can be regenerated from the .ioc file
+*.ioc
+
+# Ignore auto-generated files from STM32CubeMX or STM32CubeIDE
+MX_*.c
+MX_*.h
+
+# Ignore makefiles if they are auto-generated
+makefile
+Makefile
+*.mk
+
+# Ignore user-specific files (e.g., debug configurations)
+*.launch
+
+# Ignore backup and temporary files
+*.bak
+*.tmp
+*.log
+
+# Ignore operating system specific files
+.DS_Store
+Thumbs.db
